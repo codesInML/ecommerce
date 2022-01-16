@@ -1,0 +1,39 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "A full fledged ecommerce website built with node, express, typescript, prisma and a lot more",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "typescript",
+    "ecommerce",
+    "prisma"
+  ],
+  "author": "Ifeoluwa Olubo",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^12.0.4",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "express-async-errors": "^3.1.1",
+    "express-rate-limit": "^6.1.0",
+    "helmet": "^5.0.1",
+    "http-status-codes": "^2.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "prisma": "^3.8.1",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/express": "^4.17.13",
+    "@types/express-rate-limit": "^5.1.3",
+    "@types/jsonwebtoken": "^8.5.7",
+    "@types/node": "^17.0.8",
+    "typescript": "^4.5.4"
+  }
+}
