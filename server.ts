@@ -1,4 +1,5 @@
 import app from "./app";
+import logger from "./src/logger";
 
 // set the port
 const PORT = process.env.PORT;
@@ -7,7 +8,7 @@ const PORT = process.env.PORT;
 const start = async () => {
   try {
     app.listen(PORT, () =>
-      console.log(`server started on http://localhost:${PORT}`)
+      logger.info(`server started on http://localhost:${PORT}`)
     );
   } catch (err) {
     process.exit(1);

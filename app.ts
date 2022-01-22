@@ -1,5 +1,5 @@
 // configure the environment variables
-require("dotenv").config();
+require("dotenv").config({ path: "./app.env" });
 
 global.__basedir = __dirname;
 
@@ -7,6 +7,7 @@ global.__basedir = __dirname;
 import "express-async-errors";
 
 import express, { Application } from "express";
+import routes from "./src/routes";
 
 // security packages
 import helmet from "helmet";
@@ -23,5 +24,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(helmet());
 app.use(xss());
 app.use(rateLimit({ windowMs: 60 * 1000, max: 60 }));
+
+// set the routes
+app.use("/api/v1", routes);
 
 export default app;
