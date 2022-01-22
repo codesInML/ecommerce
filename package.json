@@ -2,9 +2,13 @@
   "name": "ecommerce",
   "version": "1.0.0",
   "description": "A full fledged ecommerce website built with node, express, typescript, prisma and a lot more",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=production node server.js",
+    "dev:tsc": "tsc --watch -p .",
+    "dev:serve": "NODE_ENV=development nodemon -e js -w dist dist/server.js",
+    "dev": "nodemon . --trace-warnings --inspect",
+    "test": "jest"
   },
   "keywords": [
     "node",
@@ -16,7 +20,8 @@
   "author": "Ifeoluwa Olubo",
   "license": "MIT",
   "dependencies": {
-    "bcrypt": "^5.0.1",
+    "@prisma/client": "^3.8.1",
+    "bcrypt": "^5.0.0",
     "dotenv": "^12.0.4",
     "ejs": "^3.1.6",
     "express": "^4.17.2",
@@ -26,14 +31,20 @@
     "http-status-codes": "^2.2.0",
     "jsonwebtoken": "^8.5.1",
     "prisma": "^3.8.1",
+    "winston": "^3.4.0",
     "xss-clean": "^0.1.1"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
     "@types/express": "^4.17.13",
     "@types/express-rate-limit": "^5.1.3",
+    "@types/jest": "^27.4.0",
     "@types/jsonwebtoken": "^8.5.7",
     "@types/node": "^17.0.8",
+    "@types/supertest": "^2.0.11",
+    "jest": "^27.4.7",
+    "supertest": "^6.2.2",
+    "ts-jest": "^27.1.3",
     "typescript": "^4.5.4"
   }
 }
